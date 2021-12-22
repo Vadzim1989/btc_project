@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import { delay } from '../utils/delay';
 import preloaderSrc from '../img/preloader.gif';
 import { TableCreater, TableHeader } from '../components/index';
 import FindContext from '../context';
+import { connStr } from '../config/connectionString';
 
 
-export const Elsk = () => {
+export const Elsk = memo(() => {
   let [titulData, setTitulData] = useState([]);
   let [isLoading, setIsLoading] = useState(false);
   
@@ -15,7 +16,7 @@ export const Elsk = () => {
     useEffect(() => {
         setIsLoading(true);
         delay(2000);
-        fetch("http://localhost:4000/api/titulinfo/elsk")
+        fetch(`${connStr}/elsk`)
         .then((res) => {
             if(res.status >=400 && res.status < 600) {
                 throw new Error('Failed fetching data')
@@ -37,4 +38,4 @@ export const Elsk = () => {
         </tbody>
       </table>
     );
-}
+})

@@ -1,4 +1,4 @@
 {
-    "port": 4000,
+    "port": 99,
     "informixURL": "DSN=gmainids;CLIENT_LOCALE=ru_RU.57372"
 }

@@ -40,5 +40,5 @@ if(process.env.NODE_ENV === 'production') {
 
 const PORT = config.get('port') || 4000
 
-app.listen(PORT, () => console.log(`Application started on port ${PORT}...`));
+app.listen(PORT, '10.245.3.132');
 

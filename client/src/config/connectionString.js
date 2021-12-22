@@ -1,0 +1,1 @@
+export const connStr = 'http://10.245.3.132:99/api/titulinfo'
