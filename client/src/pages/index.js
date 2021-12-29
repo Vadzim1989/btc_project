@@ -21,4 +21,4 @@ export * from './Narovlya.jsx';
 export * from './Lelchici.jsx';
 export * from './October.jsx';
 export * from './GomelZues.jsx';
-export * from './Test.jsx';
+export * from './NotFoundCity.jsx';

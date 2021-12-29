@@ -31,12 +31,18 @@ app.use('/api/titulinfo', require('./routers/getRogachevTituls')); // rogachev
 app.use('/api/titulinfo', require('./routers/getSvetlogorskTitul')); // svetlogorsk
 app.use('/api/titulinfo', require('./routers/getVetkaTituls')); // vetka
 
-if(process.env.NODE_ENV === 'production') {
+/* if(process.env.NODE_ENV === 'production') {
     app.use('/', express.static(path.join(__dirname, 'client', 'build')));
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     })
-}
+} */
+
+app.use('/', express.static(path.join(__dirname, 'client', 'build')));
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+})
+
 
 const PORT = config.get('port') || 4000
 

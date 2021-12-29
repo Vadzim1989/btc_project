@@ -4,11 +4,14 @@ import preloaderSrc from '../img/preloader.gif';
 import { TableCreater, TableHeader } from '../components/index';
 import FindContext from '../context';
 import { connStr } from '../config/connectionString';
+import { ExportToExcel } from '../config/toExcel';
+import { Footer } from '../components/Footer';
 
 
 export const Hoiniki = memo(() => {
   let [titulData, setTitulData] = useState([]);
   let [isLoading, setIsLoading] = useState(false);
+  const date = new Date();
   
   const {isFind} = React.useContext(FindContext);
   const filteredTitul = titulData.filter(({god_vvod}) => god_vvod === +isFind)
@@ -28,14 +31,23 @@ export const Hoiniki = memo(() => {
     },[])
 
     return (
-      <table className='table table-striped'>
-        <TableHeader/>
-        <tbody>
-          { !isLoading ?  
-          ( !isFind ? titulData.map(({...titulInfo}) => (<TableCreater {...titulInfo}/>))
-            : filteredTitul.map(({...titulInfo}) => (<TableCreater {...titulInfo}/>)))
-          : <img src={preloaderSrc} alt="preloader" style={{position:'relative', top:"50vh", left:"70vh"}}/>}         
-        </tbody>
-      </table>
+      <div className='table__wrapper'>
+        <div className='excel_import_wrapper'>
+              <ExportToExcel apiData={titulData} 
+                      fileName={`titulsinfo_${date.getFullYear()}_${date.getMonth()+1}_${date.getDate()}`}/>
+        </div>
+        <table className='table table-striped'>
+          <TableHeader/>
+          {
+            !isFind ? <Footer titulData={titulData}/> : <Footer titulData={filteredTitul}/>
+          }          
+          <tbody>            
+            { !isLoading ?  
+            ( !isFind ? titulData.map(({...titulInfo}) => (<TableCreater {...titulInfo}/>))
+              : filteredTitul.map(({...titulInfo}) => (<TableCreater {...titulInfo}/>)))
+            : <img src={preloaderSrc} alt="preloader" style={{position:'relative', top:"50vh", left:"70vh"}}/>}         
+          </tbody>
+        </table>
+      </div>
     );
 })
