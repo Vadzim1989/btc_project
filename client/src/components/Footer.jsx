@@ -8,7 +8,8 @@ export const Footer = ({titulData}) => {
             }
         return sum;
     }
-  
+    
+    // собираем сумму полей
     const all_socket_sum = arraySum(titulData.map(({all_socket}) => all_socket));
     const check_socket_sum = arraySum(titulData.map(({check_socket}) => check_socket));
     const byfly_pon_sum = arraySum(titulData.map(({byfly_pon}) => byfly_pon));
