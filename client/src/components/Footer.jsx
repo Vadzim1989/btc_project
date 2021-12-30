@@ -10,6 +10,7 @@ export const Footer = ({titulData}) => {
     }
     
     // собираем сумму полей
+    const all_tituls = titulData.map(({id_adr}) => id_adr).length;
     const all_socket_sum = arraySum(titulData.map(({all_socket}) => all_socket));
     const check_socket_sum = arraySum(titulData.map(({check_socket}) => check_socket));
     const byfly_pon_sum = arraySum(titulData.map(({byfly_pon}) => byfly_pon));
@@ -24,7 +25,7 @@ export const Footer = ({titulData}) => {
     return (
         <tfoot>        
             <tr key='footer'>
-                <td colSpan={4} style={{textAlign: 'left'}}>ВСЕГО:</td>
+                <td colSpan={4} style={{textAlign: 'left'}}>{`ВСЕГО: ${all_tituls} титулов`}</td>
                 <td className="titulsNumbers">{all_socket_sum}</td>
                 <td className="titulsNumbers">{check_socket_sum}</td>
                 <td className="titulsNumbers">{byfly_pon_sum}</td>
