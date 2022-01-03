@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "author": "Vadim Denisovski <vadim.denisovski@gmail.com>",
   "dependencies": {
     "config": "^3.3.6",
     "cors": "^2.8.5",
