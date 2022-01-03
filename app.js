@@ -46,5 +46,6 @@ app.get('*', (req, res) => {
 
 const PORT = config.get('port') || 4000
 
-app.listen(PORT, '10.245.3.132');
+//app.listen(PORT, '10.245.3.132');
+app.listen(PORT);
 
