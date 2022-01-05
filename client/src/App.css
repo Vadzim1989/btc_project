@@ -118,3 +118,7 @@ h3 {
     position: sticky;
     top: -1px;
 }
+
+input#text_search_form {
+    width: 35vw;
+}

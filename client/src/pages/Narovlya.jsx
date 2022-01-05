@@ -14,7 +14,13 @@ export const Narovlya = memo(() => {
   const date = new Date();
   
   const {isFind} = React.useContext(FindContext);
-  const filteredTitul = titulData.filter(({god_vvod}) => god_vvod === +isFind)
+  let filteredTitul = [];
+
+  if(typeof(isFind) === 'number') {
+    filteredTitul = titulData.filter(({god_vvod}) => god_vvod === isFind)
+  } else if(typeof(isFind) === 'string') {
+    filteredTitul = titulData.filter(({name_titul}) => name_titul.toLowerCase().includes(isFind.toLowerCase()))
+  }
 
     useEffect(() => {
         setIsLoading(true);

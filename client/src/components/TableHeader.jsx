@@ -5,6 +5,9 @@ import FindContext from "../context";
 export const TableHeader = memo(() => {  
     const {setIsFind} = useContext(FindContext);
     const onChangeHandle = ({target: {value}}) => {
+      setIsFind(+value);
+    }
+    const onChangeHandleName = ({target: {value}}) => {
       setIsFind(value);
     }
     
@@ -13,11 +16,18 @@ export const TableHeader = memo(() => {
           <tr>
             <th style={{width: "2%"}}>№ титула</th>
             <th style={{width: "5%"}}>Район</th>
-            <th style={{width: "45%"}}>Имя титула</th>
+            <th style={{width: "45%"}}>
+              <label htmlFor="search_form">Имя титула
+                  <input  type="text" id="text_search_form" 
+                          className="form-control form-control-sm" 
+                          onChange={onChangeHandleName}
+                          onMouseOver={(e) => e.currentTarget.select()}/>
+              </label>               
+            </th>
             <th style={{width: "5%"}}>
               <label htmlFor="search_form">Год ввода
                   <input  type="search" id="search_form" 
-                          className="search_input" 
+                          className="form-control form-control-sm" 
                           onChange={onChangeHandle}
                           onMouseOver={(e) => e.currentTarget.select()}/>
               </label> 
