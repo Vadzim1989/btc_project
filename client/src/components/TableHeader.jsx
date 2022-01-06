@@ -18,7 +18,7 @@ export const TableHeader = memo(() => {
             <th style={{width: "5%"}}>Район</th>
             <th style={{width: "45%"}}>
               <label htmlFor="search_form">Имя титула
-                  <input  type="text" id="text_search_form" 
+                  <input  type="search" id="text_search_form" 
                           className="form-control form-control-sm" 
                           onChange={onChangeHandleName}
                           onMouseOver={(e) => e.currentTarget.select()}/>
