@@ -1,4 +1,5 @@
 {
     "port": 99,
-    "informixURL": "DSN=gmainids;CLIENT_LOCALE=ru_RU.57372"
+    "informixURL": "DSN=gmainids;CLIENT_LOCALE=ru_RU.57372",
+    "tableName": "titul_info_2"
 }

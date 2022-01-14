@@ -1,13 +1,14 @@
 const express = require('express');
 const db = require('odbc');
 const cs = require('config').get('informixURL');
+const name = require('config').get('tableName');
 
 const router = express.Router();
 
 async function querySelect() {
     const connection = await db.connect(cs);
     const statement = await connection.createStatement();
-    await statement.prepare(`select * from gomel:titul_info where zues = "СВЕТЛОГОРСКИЙ" order by id_adr`);
+    await statement.prepare(`select * from gomel:${name} where zues = "СВЕТЛОГОРСКИЙ" order by id_adr`);
     const result = await statement.execute();
     return result;
 }

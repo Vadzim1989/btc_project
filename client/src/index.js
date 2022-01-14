@@ -5,7 +5,7 @@ import FindContext from './context'
 
 // make search
 function Main() {
-  const [isFind, setIsFind] = React.useState(null);
+  let [isFind, setIsFind] = React.useState(null);
   return (
     <FindContext.Provider value={{isFind, setIsFind}}>
       <App/>

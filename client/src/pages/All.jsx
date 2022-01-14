@@ -13,8 +13,9 @@ export const All = memo(() => {
   let [isLoading, setIsLoading] = useState(false);
   const date = new Date();
   
-  const {isFind} = React.useContext(FindContext);
+  let {isFind} = React.useContext(FindContext);
   // const filteredTitul = titulData.filter(({god_vvod}) => god_vvod === isFind)
+  
   
   let filteredTitul = [];
 

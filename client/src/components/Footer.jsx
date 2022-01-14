@@ -13,6 +13,10 @@ export const Footer = ({titulData}) => {
     const all_tituls = titulData.map(({id_adr}) => id_adr).length;
     const all_socket_sum = arraySum(titulData.map(({all_socket}) => all_socket));
     const check_socket_sum = arraySum(titulData.map(({check_socket}) => check_socket));
+    const kv_all_sum = arraySum(titulData.map(({kv_all}) => kv_all));
+    const kv_pon_sum = arraySum(titulData.map(({kv_pon}) => kv_pon));
+    const ta_all_sum = arraySum(titulData.map(({ta_all}) => ta_all));
+    const ta_pon_sum = arraySum(titulData.map(({ta_pon}) => ta_pon));
     const byfly_pon_sum = arraySum(titulData.map(({byfly_pon}) => byfly_pon));
     const zala_pon_sum = arraySum(titulData.map(({zala_pon}) => zala_pon));
     const byfly_zala_pon_sum = arraySum(titulData.map(({byfly_zala_pon}) => byfly_zala_pon));
@@ -28,6 +32,10 @@ export const Footer = ({titulData}) => {
                 <td colSpan={4} style={{textAlign: 'left'}}>{`ВСЕГО: ${all_tituls} титулов`}</td>
                 <td className="titulsNumbers">{all_socket_sum}</td>
                 <td className="titulsNumbers">{check_socket_sum}</td>
+                <td className="titulsNumbers">{kv_all_sum}</td>
+                <td className="titulsNumbers">{kv_pon_sum}</td>
+                <td className="titulsNumbers">{ta_all_sum}</td>
+                <td className="titulsNumbers">{ta_pon_sum}</td>
                 <td className="titulsNumbers">{byfly_pon_sum}</td>
                 <td className="titulsNumbers">{zala_pon_sum}</td>
                 <td className="titulsNumbers">{byfly_zala_pon_sum}</td>
