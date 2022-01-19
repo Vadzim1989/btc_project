@@ -122,3 +122,23 @@ h3 {
 input#text_search_form {
     width: 35vw;
 }
+
+@media screen and (min-width:1150px) {
+    .list-group a {
+        font-size: .8rem;
+        padding: 1.5%;
+    }
+
+    table {
+        font-size: .55rem;
+    }
+
+    input {
+        transform: scale(.8);
+    }
+
+    #search_form {
+        width: 125%;
+        margin-left: -8%;
+    }
+}
