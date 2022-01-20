@@ -4,7 +4,7 @@ export const NotFoundCity = () => {
   return(
     <div style={{textAlign: 'center', margin: '0 auto'}}>
       <h1>Страница не найдена!</h1>
-      <Link to='/'>Вернуться на главную страницу</Link>
+      <Link to='/gomel'>Вернуться на главную страницу</Link>
     </div>
   )
 }

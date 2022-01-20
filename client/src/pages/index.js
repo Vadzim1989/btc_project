@@ -22,3 +22,4 @@ export * from './Lelchici.jsx';
 export * from './October.jsx';
 export * from './GomelZues.jsx';
 export * from './NotFoundCity.jsx';
+export * from './NotFoundAll';
