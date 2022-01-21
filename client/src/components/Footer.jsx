@@ -24,7 +24,7 @@ export const Footer = ({titulData}) => {
     const phone_null_pon_sum = arraySum(titulData.map(({phone_null_pon}) => phone_null_pon));
     const vpn_sum = arraySum(titulData.map(({vpn}) => vpn));
 
-
+    
 
     return (
         <tfoot>        

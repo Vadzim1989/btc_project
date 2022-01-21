@@ -9,7 +9,7 @@ export const TableHeader = memo(() => {
     const onChangeHandleName = ({target: {value}}) => {
       setIsFind(value);
     }
-
+    
     
     return (
         <thead>

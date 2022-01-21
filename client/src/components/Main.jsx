@@ -9,7 +9,7 @@ export const Main = () => {
             <Router>  
                 <List/> 
                 <Routes>
-                    <Route path='/' element={<city.NotFoundAll/>}></Route>
+                    <Route path='/' element={<city.All/>}></Route>
                     <Route path='/gomel' element={<city.Gomel/>}></Route>
                     <Route path='/vetka' element={<city.Vetka/>}></Route>
                     <Route path='/chechersk' element={<city.Chechersk/>}></Route>

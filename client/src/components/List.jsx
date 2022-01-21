@@ -9,7 +9,7 @@ export const List = () => {
   const onClickHandle = () => {
     setIsFind(null);
   }
-
+  
 
   return (
     <div className="list__wrapper">
@@ -17,9 +17,9 @@ export const List = () => {
         <div className="img__wrapper">
           <img src={logoSrc} alt="logo" />
         </div>        
-        {/* <NavLink to='/' onClick={onClickHandle} className="list-group-item list-group-item-action">
+        <NavLink to='/' onClick={onClickHandle} className="list-group-item list-group-item-action">
           Гомельский филиал
-        </NavLink> */}
+        </NavLink>
         <NavLink to='/gomel' onClick={onClickHandle} className="list-group-item list-group-item-action">
           Гомель
         </NavLink>

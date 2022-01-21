@@ -36,7 +36,6 @@ export const Gomel = memo(() => {
         .finally(() => setIsLoading(false))
     },[])
 
-    
     return (
       <div className='table__wrapper'>
         <div className='excel_import_wrapper'>

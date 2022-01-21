@@ -8,7 +8,7 @@ const router = express.Router();
 async function querySelect() {
     const connection = await db.connect(cs);
     const statement = await connection.createStatement();
-    await statement.prepare(`select * from gomel:${name} where zues = "БУДА-КОШЕЛЕВСКИЙ" order by id_adr`);
+    await statement.prepare(`select * from gomel:${name} where zues = "БУДА-КОШЕЛЕВСКИ" order by id_adr`);
     const result = await statement.execute();
     return result;
 }
